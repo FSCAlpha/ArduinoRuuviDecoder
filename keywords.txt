@@ -1,0 +1,39 @@
+#######################################
+# Syntax Coloring Map for RuuviTag Decoder
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+RuuviTagDecoder	KEYWORD1
+ruuvi_data_t	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+decode	KEYWORD2
+decodeFormat5	KEYWORD2
+decodeFormat3	KEYWORD2
+getTemp	KEYWORD2
+getTemperature	KEYWORD2
+getTempF	KEYWORD2
+getHumidity	KEYWORD2
+getPressure	KEYWORD2
+getAccelX	KEYWORD2
+getAccelY	KEYWORD2
+getAccelZ	KEYWORD2
+getBatteryVoltage	KEYWORD2
+getBatteryMv	KEYWORD2
+getTxPower	KEYWORD2
+getMovementCounter	KEYWORD2
+getMeasurementSequence	KEYWORD2
+getMac	KEYWORD2
+getMacString	KEYWORD2
+isValid	KEYWORD2
+printAll	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
