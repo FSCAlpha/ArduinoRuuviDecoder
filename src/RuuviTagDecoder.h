@@ -30,7 +30,7 @@ public:
     }
 
     /**
-     * Decode RuuviTag data (auto-detects format)
+     * Decode RuuviTag data
      * @param rawData Pointer to manufacturer data
      * @param dataLen Length of data
      * @return true if decode successful
@@ -48,8 +48,6 @@ public:
     bool decodeFormat5(const uint8_t* rawData, uint8_t dataLen) {
         return ruuvi_decode_format5(rawData, dataLen, &data);
     }
-
-    // Getter methods - simple and Arduino-friendly!
 
     /** Get temperature in Celsius */
     float getTemp() const { return data.temperature; }
