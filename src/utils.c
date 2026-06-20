@@ -24,13 +24,15 @@ bool check_hex_string(char *str) {
 bool hex_to_bytes(char *hex_str, uint8_t* out) {
     char *ptr = hex_str;
 
-    // Skip 0x
+    // Skip 0x (guard against reading past a 1-char string)
     if (hex_str[0] == '0' && hex_str[1] == 'x') {
         ptr += 2;
     }
 
+    // Must be exactly 24 bytes worth of hex digits, or the loop below
+    // would read past the end of the string.
+    if (strlen(ptr) != 48) return false;
     if (!check_hex_string(ptr)) return false;
-    if (strlen(ptr) > 48) return false;
 
     for (int i = 0; i < 24; i++) {
         out[i] = (hex_char_to_byte(ptr[i*2]) << 4) | hex_char_to_byte(ptr[i*2+1]);

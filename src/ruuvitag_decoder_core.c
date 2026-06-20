@@ -3,7 +3,16 @@
 #include <stdio.h>
 
 bool ruuvi_decode_format5(const uint8_t* raw_data, uint8_t data_len, ruuvi_data_t* output) {
+    if (raw_data == NULL || output == NULL) {
+        return false;
+    }
+
     output->valid = false;
+
+    // Format 5 advertisements are exactly 24 bytes
+    if (data_len < 24) {
+        return false;
+    }
 
     // Not format 5
     if (raw_data[0] != 5) {
