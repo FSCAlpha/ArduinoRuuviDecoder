@@ -154,5 +154,6 @@ int main(void) {
     RUN_TEST(test_minimum_bytes);
     RUN_TEST(test_invalid_string);
     RUN_TEST(test_invalid_bytes);
+    TEST_SUMMARY();
     return 0;
 }
